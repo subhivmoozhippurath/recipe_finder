@@ -1,38 +1,120 @@
-.App {
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding:0;
+    margin:0;
+    font-family: "Bitter", serif;
+}
+body{
+    background-color:white;
+}
+.main {
+  width: 100%;
+  margin: 0 auto;
+  padding:2rem;
   text-align: center;
+  background-color: azure;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heading h1{
+    font-size: 34px;
+    font-weight: 900;
+    margin-top: 1rem;
+    padding-top: 2rem;
+}
+.searcfBar{
+  margin:1rem 0;
+  width:360px;
+  height:40px;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  padding: .3rem 1rem;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.container{
+  width: 80%;
+  margin :25px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  grid-gap: 2rem;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card{
+width:180px;
+border-radius: 1rem;
+background-color: aqua;
+padding: 5px;
+}
+.card img{
+  width:100%;
+  border-radius: 1rem 1rem 0 0;
+}
+.card h3{
+  font-size: 14px;
+  color: black;
+  text-align: center;
+  padding-top: 5px;
+}
+/* .choices {
+  overflow: hidden; 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.choices img {
+  width: 120px;
+  height: 120px; 
+  object-fit: cover; 
+  border-radius: 50%;
+} */
+.containerChoice{
+  width: 80%;
+  margin :25px auto;
+  display: flex;
+  gap:50px; 
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding-bottom: 10px; /* Add padding for scroll bar space */
+  scroll-snap-type: x mandatory; 
+}
+.containerChoice::-webkit-scrollbar {
+  height: 8px; /* Height of the scrollbar */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.containerChoice::-webkit-scrollbar-thumb {
+  background-color: #888; /* Scrollbar thumb color */
+  border-radius: 10px; /* Rounded edges for thumb */
+}
+
+.containerChoice::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darken on hover */
+}
+
+.containerChoice > * {
+  scroll-snap-align: start; /* Aligns items to the start of the scroll snap */
+}
+.choices {
+  width: 100px; /* Ensures each card has a minimum width */
+  flex: 0 0 auto; /* Prevents items from shrinking */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+.choices img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%; /* Circular image */
+  object-fit: cover;
 }
