@@ -2,7 +2,8 @@ import React from 'react';
 import RecipeList from './RecipeList';
 import { useContext, useEffect, useState } from "react";
 import Options from './Options';
-import {ChoicesList} from '../Utils/const'
+import {ChoicesList} from '../Utils/const';
+import Header from './Header';
 
 
 const Home = () => {
@@ -32,13 +33,14 @@ const Home = () => {
       
     return (
         <>
+
         <div className='main flex flex-col items-center'>
-            <div className='Heading'>
+            <div className='heading'>
                 <h1>Search Your Favourite Food Here </h1>
-                <p>dhvcgsd hdfcgeugfcu sdhcgweyfugeu dsh</p>
+                <p>Simple recipes made for   <span>real, actual, everyday life.</span></p>
             </div>
             <div className='searchBox'>
-                <input className='searcfBar' type='search'
+                <input className='searcfBar' type='search' placeholder='search by incgedients,name etc...'
                 onChange={e => setsearch(e.target.value)}
                 onKeyPress={searchRecipe}/>
                
@@ -58,6 +60,7 @@ const Home = () => {
         </div>
 
         <div className='container'>
+        <div className='container-inner'>
         {recipes.length > 0 ? (
                     recipes.map((recipe, index) => (
                         <RecipeList key={index} recipe={recipe} />
@@ -65,6 +68,7 @@ const Home = () => {
                 ) : (
                     <p>No recipes found for "{recipeChoices}"</p>
                 )}
+        </div>
         </div>
 
         </>

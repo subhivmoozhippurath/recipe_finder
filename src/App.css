@@ -2,22 +2,23 @@
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */
-
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
 *{
     padding:0;
     margin:0;
     font-family: "Bitter", serif;
+    box-sizing: border-box;
 }
 body{
-    background-color:white;
+    background-color:#F5F5F7;
+    overflow-x: hidden;
 }
 .main {
   width: 100%;
   margin: 0 auto;
   padding:2rem;
   text-align: center;
-  background-color: azure;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,6 +28,14 @@ body{
     font-weight: 900;
     margin-top: 1rem;
     padding-top: 2rem;
+}
+.heading>p>span{
+  color: rgb(115 64 96 / var(--tw-text-opacity));
+  font-size: 2.5rem;
+  white-space: nowrap;
+  font-family: "Edu AU VIC WA NT Pre", cursive;
+  letter-spacing: 0;
+  text-transform: lowercase;
 }
 .searcfBar{
   margin:1rem 0;
@@ -38,19 +47,37 @@ body{
   padding: .3rem 1rem;
 
 }
-
-.container{
+.row{
+  width:100vw;
+}
+/* .container{
   width: 80%;
   margin :25px auto;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
   grid-gap: 2rem;
+background-color: rgb(242 242 242 / var(--tw-bg-opacity));;
+} */
+.container {
+  width: 100%; 
+  margin: 25px auto;
+  padding:25px 0px;
+  display: flex; 
+  justify-content: center;
+  background-color: #EDDFE0;
+}
 
+.container-inner {
+  width: 80%; /* Inner container takes up 80% of the width */
+  display: grid; /* Grid layout for the content */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Grid layout for flexible columns */
+  grid-gap: 2rem; /* Space between items */
+  background-color: rgb(242 242 242 / var(--tw-bg-opacity)); /* Optional background */
 }
 .card{
 width:180px;
 border-radius: 1rem;
-background-color: aqua;
+background-color: #F5F5F7;
 padding: 5px;
 }
 .card img{
@@ -63,20 +90,6 @@ padding: 5px;
   text-align: center;
   padding-top: 5px;
 }
-/* .choices {
-  overflow: hidden; 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.choices img {
-  width: 120px;
-  height: 120px; 
-  object-fit: cover; 
-  border-radius: 50%;
-} */
 .containerChoice{
   width: 80%;
   margin :25px auto;
@@ -117,4 +130,98 @@ padding: 5px;
   height: auto;
   border-radius: 50%; /* Circular image */
   object-fit: cover;
+  margin-bottom: 1rem;
+}
+.desc_img{
+  width:100%;
+  position: fixed;
+  aspect-ratio: 16/9;
+}
+.content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2% 10% -9% 10%;
+}
+.content img{
+  width:100%;
+height:600px;
+}
+.desc_iinner_content{
+position: absolute;
+top:45%;
+left:50%;
+transform: translate(-50%,-50%);
+background: linear-gradient(to right, white, transparent);
+padding: 20px;
+color:black;
+font-size: 1rem;
+margin-bottom: 2px;
+text-align: center;
+box-shadow: 0px 15px 15px rgba(0,0,0,0.5);
+}
+.recipe_desc{
+  width: 100%;
+  margin: 2rem auto;
+  padding: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #EDDFE0;
+}
+.incredients, .instruction{
+  flex-basis: 50%;
+  text-align: justify;
+  border: 0 solid #e6e6e6;
+  box-sizing: border-box;
+  background-color: rgb(77 77 77 / var(--tw-bg-opacity));
+}
+.incredients h4{
+  margin-top: 1.5rem;
+  font-weight: bold;
+}
+.instruction h2{
+  margin-bottom: 1rem;
+}
+.instruction p{
+  font-size: 18px;
+  line-height:21px ;
+}
+/* Header styles */
+.header {
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  padding: 0.5rem 2rem; /* equivalent to px-8 py-2 */
+  background: linear-gradient(to bottom, black, transparent); /* equivalent to bg-gradient-to-b from-black */
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo styles */
+.logo {
+  width: 11rem; /* equivalent to w-44 (you can adjust this as needed) */
+}
+
+/* Navigation styles */
+.nav {
+  display: flex;
+  gap: 2rem; /* equivalent to gap-8 */
+}
+
+/* Navigation link styles */
+.nav-link {
+  color: white;
+  text-decoration: none; /* Remove underlines from links */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for links */
+.nav-link:hover {
+  color: #D1D5DB; /* equivalent to hover:text-gray-300 */
+}
+.recipeContainer{
+  width:100vw;
 }
