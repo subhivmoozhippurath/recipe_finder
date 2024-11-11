@@ -8,6 +8,7 @@ import {ChoicesList} from '../Utils/const'
 const Home = () => {
     const [recipeChoices,setrecipeChoices] = useState('breakfast');
     const [recipes, setRecipes] = useState([]); 
+    const [search,setsearch] = useState('')
     useEffect(() => {
         fetchRecipeListApi();
     },[recipeChoices]);
@@ -16,13 +17,18 @@ const Home = () => {
           const response =  await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${recipeChoices}`);
           const jsonRes = await response.json();
           setRecipes(jsonRes.meals || []);
-          console.log(jsonRes.meals )
             
            
       }
       const handleChoiceClick = (type) => {
         setrecipeChoices(type);
       }
+      const searchRecipe = (e) => {
+        if(e.key == "Enter"){
+            setrecipeChoices(search)
+        }
+      }
+     
       
     return (
         <>
@@ -32,7 +38,9 @@ const Home = () => {
                 <p>dhvcgsd hdfcgeugfcu sdhcgweyfugeu dsh</p>
             </div>
             <div className='searchBox'>
-                <input className='searcfBar' type='search'/>
+                <input className='searcfBar' type='search'
+                onChange={e => setsearch(e.target.value)}
+                onKeyPress={searchRecipe}/>
                
             </div>
 
