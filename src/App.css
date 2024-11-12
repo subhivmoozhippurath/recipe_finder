@@ -1,9 +1,6 @@
-
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     padding:0;
     margin:0;
@@ -50,14 +47,6 @@ body{
 .row{
   width:100vw;
 }
-/* .container{
-  width: 80%;
-  margin :25px auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
-  grid-gap: 2rem;
-background-color: rgb(242 242 242 / var(--tw-bg-opacity));;
-} */
 .container {
   width: 100%; 
   margin: 25px auto;
@@ -68,11 +57,11 @@ background-color: rgb(242 242 242 / var(--tw-bg-opacity));;
 }
 
 .container-inner {
-  width: 80%; /* Inner container takes up 80% of the width */
-  display: grid; /* Grid layout for the content */
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Grid layout for flexible columns */
-  grid-gap: 2rem; /* Space between items */
-  background-color: rgb(242 242 242 / var(--tw-bg-opacity)); /* Optional background */
+  width: 80%;
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 2rem;
+  background-color: rgb(242 242 242 / var(--tw-bg-opacity));
 }
 .card{
 width:180px;
@@ -95,29 +84,29 @@ padding: 5px;
   margin :25px auto;
   display: flex;
   gap:50px; 
-  overflow-x: auto; /* Enable horizontal scrolling */
-  padding-bottom: 10px; /* Add padding for scroll bar space */
+  overflow-x: auto;
+  padding-bottom: 10px;
   scroll-snap-type: x mandatory; 
 }
 .containerChoice::-webkit-scrollbar {
-  height: 8px; /* Height of the scrollbar */
+  height: 8px;
 }
 
 .containerChoice::-webkit-scrollbar-thumb {
-  background-color: #888; /* Scrollbar thumb color */
-  border-radius: 10px; /* Rounded edges for thumb */
+  background-color: #888; 
+  border-radius: 10px; 
 }
 
 .containerChoice::-webkit-scrollbar-thumb:hover {
-  background-color: #555; /* Darken on hover */
+  background-color: #555;
 }
 
 .containerChoice > * {
-  scroll-snap-align: start; /* Aligns items to the start of the scroll snap */
+  scroll-snap-align: start; 
 }
 .choices {
-  width: 100px; /* Ensures each card has a minimum width */
-  flex: 0 0 auto; /* Prevents items from shrinking */
+  width: 100px;
+  flex: 0 0 auto; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -128,7 +117,7 @@ padding: 5px;
 .choices img {
   width: 100%;
   height: auto;
-  border-radius: 50%; /* Circular image */
+  border-radius: 50%; 
   object-fit: cover;
   margin-bottom: 1rem;
 }
@@ -186,41 +175,6 @@ box-shadow: 0px 15px 15px rgba(0,0,0,0.5);
 .instruction p{
   font-size: 18px;
   line-height:21px ;
-}
-/* Header styles */
-.header {
-  position: absolute;
-  width: 100%;
-  margin: 0;
-  padding: 0.5rem 2rem; /* equivalent to px-8 py-2 */
-  background: linear-gradient(to bottom, black, transparent); /* equivalent to bg-gradient-to-b from-black */
-  z-index: 20;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Logo styles */
-.logo {
-  width: 11rem; /* equivalent to w-44 (you can adjust this as needed) */
-}
-
-/* Navigation styles */
-.nav {
-  display: flex;
-  gap: 2rem; /* equivalent to gap-8 */
-}
-
-/* Navigation link styles */
-.nav-link {
-  color: white;
-  text-decoration: none; /* Remove underlines from links */
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-/* Hover effect for links */
-.nav-link:hover {
-  color: #D1D5DB; /* equivalent to hover:text-gray-300 */
 }
 .recipeContainer{
   width:100vw;

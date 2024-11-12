@@ -1,16 +1,18 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const RecipeList = ({recipe}) => {
+const RecipeList = ({ recipe }) => {
   let navigate = useNavigate();
-  //console.log(recipe)
   return (
-    <div className='card'key={recipe.idMeal} onClick={() => navigate(`/${recipe.idMeal}`)}>
-        <img src={recipe.strMealThumb}/>
-        <h3>{recipe.strMeal}</h3>
-      
+    <div
+      className="card"
+      key={recipe.idMeal}
+      onClick={() => navigate(`/${recipe.idMeal}`)}
+    >
+      <img src={recipe.strMealThumb} />
+      <h3>{recipe.strMeal}</h3>
     </div>
-  )
-}
+  );
+};
 
-export default RecipeList
+export default RecipeList;
