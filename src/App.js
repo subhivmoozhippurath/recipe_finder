@@ -2,6 +2,7 @@ import './App.css';
 import Home from './Components/Home';
 import { Route,Routes } from 'react-router-dom';
 import RecipeDetai from './Components/RecipeDetai';
+import React from 'react';
 function App() {
   return (
     <>

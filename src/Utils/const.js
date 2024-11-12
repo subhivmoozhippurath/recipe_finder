@@ -14,6 +14,10 @@ export const ChoicesList = [
     {type : 'Soup',
         img :'https://www.themealdb.com/images/media/meals/zadvgb1699012544.jpg'
     },
+    {type : 'Curry',
+        img :'https://www.themealdb.com/images/media/meals/sstssx1487349585.jpg'
+    },
+
 
 
 ];

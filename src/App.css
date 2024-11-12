@@ -62,6 +62,8 @@ body{
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-gap: 2rem;
   background-color: rgb(242 242 242 / var(--tw-bg-opacity));
+  justify-items: center;
+  align-items: center;
 }
 .card{
 width:180px;
@@ -178,4 +180,19 @@ box-shadow: 0px 15px 15px rgba(0,0,0,0.5);
 }
 .recipeContainer{
   width:100vw;
+}
+@media (max-width:480px){
+  .heading h1 {
+    font-size: 21px;
+  }
+  .heading>p>span {
+    font-size: 1rem;
+
+  }
+  .searchBox{
+    width:100%;
+  }
+  .searcfBar{
+    width:90%;
+  }
 }
