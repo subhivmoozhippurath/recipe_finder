@@ -22,4 +22,7 @@ export const ChoicesList = [
 
 ];
 export const LOGO =
-"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHygmOKLhvcEQMvNu0Y10fUxdT7e7XnswjSw&s"
+"https://w7.pngwing.com/pngs/524/137/png-transparent-restaurant-logo-illustration-gluten-free-diet-logo-celiac-disease-wheat-restaurant-logo-emblem-food-free-logo-design-template.png"
+// "https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png"
+
+// "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHygmOKLhvcEQMvNu0Y10fUxdT7e7XnswjSw&s"

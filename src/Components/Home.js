@@ -29,7 +29,7 @@ const Home = () => {
   };
 
   return (
-    <>
+    <div className="homeContainer">
       <div className="main flex flex-col items-center">
         <div className="heading">
           <h1>Search Your Favourite Food Here </h1>
@@ -68,7 +68,7 @@ const Home = () => {
           )}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default Home;

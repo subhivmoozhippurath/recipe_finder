@@ -10,6 +10,12 @@
 body{
     background-color:#F5F5F7;
     overflow-x: hidden;
+
+}
+.homeContainer{
+  padding-top: 80px; /* Adjust this value to match the header height */
+  box-sizing: border-box;
+  min-height: calc(100vh - 80px);
 }
 .main {
   width: 100%;
